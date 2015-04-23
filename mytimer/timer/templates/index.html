@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>GSOC 2015 countdown</title>
+		<!-- CSS -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+        <link rel="stylesheet" href="./assets/flipclock.css">
+		<link rel="stylesheet" href="./assets/bootstrap.css">
+        <link rel="stylesheet" href="./assets/main.css">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Junction">
+		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<script src="./assets/flipclock.js"></script>
+	</head>
+	<body>
+
+        <div class="container">
+	        <div class="outer">
+	        	<div class="inner">
+	        	<div class="centered">
+	        		<h1 style="font-family: Lato;">
+		        		<span style="color:#2274EF"> GSOC </span>
+		        		<span style="color:#D94A35"> RESULT </span>
+		        		<span style="color:#FFB607"> OUT</span>
+		        		<span style="color:#019F5A">IN</span>
+		        		<span style="color:#2274EF">...</span>
+	        		</h1>	
+			        <div class="clock" ></div>    		
+	        	</div>
+	        	</div>
+	        </div>
+        </div>
+
+		<script type="text/javascript">
+			var clock;
+			$(document).ready(function() {
+
+				// Grab the current date
+				var currentDate = new Date();
+
+				// Set some date in the future. In this case, it's always Jan 1
+                var futureDate  = new Date(currentDate.getFullYear() - 0, 3, 28, 0 , 30);
+
+				// Calculate the differencx`e in seconds between the future and current date
+				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+				// Instantiate a coutdown FlipClock
+				clock = $('.clock').FlipClock(diff, {
+					clockFace: 'DailyCounter',
+					countdown: true
+				});
+			});
+		</script>
+
+	</body>
+</html>
