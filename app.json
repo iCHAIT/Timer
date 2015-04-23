@@ -1,0 +1,7 @@
+{
+  "name": "Timer",
+  "description": "A countdown timer written in javascript.",
+  "repository": "https://github.com/iCHAIT/Timer",
+  // "logo": "https://node-js-sample.herokuapp.com/node.svg",
+  // "keywords": ["node", "express", "static"]
+}
