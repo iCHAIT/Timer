@@ -6,7 +6,6 @@ A countdown timer application written in javascript powered by django and deploy
 TODO
 ====
 
-* Deploy to heroku
 * Mail Setup
 
 Stretch Goal
